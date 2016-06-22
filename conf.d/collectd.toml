@@ -1,0 +1,8 @@
+[template]
+src = "01hostname.conf.tmpl"
+dest = "/etc/collectd/collectd.conf.d/01hostname.conf"
+keys = [
+  "/self",
+]
+
+reload_cmd = "/usr/bin/sv force-reload collectd"

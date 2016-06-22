@@ -10,4 +10,8 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+ADD ./conf.d /etc/confd/conf.d
+ADD ./templates /etc/confd/templates
+ADD ./confd.run /etc/service/confd/run
+
 COPY /config/*.conf /etc/collectd/collectd.conf.d/
