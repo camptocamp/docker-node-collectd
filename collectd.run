@@ -3,8 +3,8 @@
 exec 2>&1
 
 while true; do
-  sv status confd && break
   echo "waiting for confd to come up"
+  sv status confd && sleep 3 && break
   sleep 1
 done
 
