@@ -13,5 +13,6 @@ RUN apt-get update \
 ADD ./conf.d /etc/confd/conf.d
 ADD ./templates /etc/confd/templates
 ADD ./confd.run /etc/service/confd/run
+ADD ./collectd.run /etc/service/collectd/run
 
 COPY /config/*.conf /etc/collectd/collectd.conf.d/

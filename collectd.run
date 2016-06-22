@@ -1,0 +1,11 @@
+#!/bin/sh
+
+exec 2>&1
+
+while true; do
+  sv status confd && break
+  echo "waiting for confd to come up"
+  sleep 1
+done
+
+exec /usr/sbin/collectd -f
