@@ -7,6 +7,7 @@ RUN apt-get update \
     libgcrypt20 \
     libriemann-client0 \
     libudev1 \
+    openjdk-8-jre-headless \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
