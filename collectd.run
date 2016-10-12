@@ -8,4 +8,6 @@ while true; do
   sleep 1
 done
 
+export LD_PRELOAD="/usr/share/collectd/rootfs_prefix.so"
+
 exec /usr/sbin/collectd -f
