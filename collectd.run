@@ -2,10 +2,4 @@
 
 exec 2>&1
 
-while true; do
-  echo "waiting for confd to come up"
-  sv status confd && sleep 3 && break
-  sleep 1
-done
-
 exec chpst -e /etc/service/collectd/env /usr/sbin/collectd -f
