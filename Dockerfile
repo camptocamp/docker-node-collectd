@@ -7,9 +7,6 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ADD ./conf.d /etc/confd/conf.d
-ADD ./templates /etc/confd/templates
-ADD ./confd.run /etc/service/confd/run
 ADD ./collectd.run /etc/service/collectd/run
 
 RUN echo "/usr/src/rootfs_prefix/rootfs_prefix.so" > /etc/service/collectd/env/LD_PRELOAD
