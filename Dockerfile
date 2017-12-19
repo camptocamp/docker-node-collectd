@@ -1,4 +1,4 @@
-FROM camptocamp/collectd:v0.3.1
+FROM camptocamp/collectd:v0.3.2
 
 RUN apt-get update \
  && apt-get -y upgrade \
