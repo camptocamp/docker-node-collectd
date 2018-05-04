@@ -1,8 +1,9 @@
-FROM camptocamp/collectd:v0.3.2
+FROM camptocamp/collectd:v5.8.0-20180504
 
 RUN apt-get update \
  && apt-get -y upgrade \
  && apt-get -y --no-install-suggests --no-install-recommends install \
+    libmnl0 \
     libudev1 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
